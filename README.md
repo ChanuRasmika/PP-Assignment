@@ -24,8 +24,6 @@
 
 To build and run the FormLang++ tool, ensure you have **Flex**, **Bison**, and **GCC** installed on your system.
 
-### 1. Generate Lexer and Parser
-
 Run the following commands to generate the lexer and parser files:
 
 ```bash
