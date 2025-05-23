@@ -63,6 +63,9 @@
 "["                 { return LBRACKET; }
 "]"                 { return RBRACKET; }
 ","                 { return COMMA; }
+"<"                 { return LT; }
+">"                 { return GT; }
+
 
 \"(\\.|[^"\\])*\" {
     yylval.str = strdup(yytext + 1);
