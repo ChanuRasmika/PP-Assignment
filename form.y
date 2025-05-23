@@ -210,7 +210,10 @@ field_attr:
             field_attr.radio_option_count = $3.count;
             free($3.options);
         }
+    | ACCEPT EQUALS STRING
+        { /* handle accept attribute here, e.g., store in field_attr */ }
     ;
+
 
 input_type:
     TEXT              { $$ = strdup("text"); }
