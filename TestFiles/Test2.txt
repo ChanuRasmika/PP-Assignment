@@ -1,0 +1,15 @@
+form FeedbackForm {
+  section Comments {
+    field feedback: textarea rows=5 cols=40 required;
+  }
+}
+
+
+<form id="FeedbackForm">
+<!-- Form: FeedbackForm -->
+<fieldset>
+<legend>Comments</legend>
+<label for="feedback">Feedback: </label>
+<textarea name="feedback" id="feedback" rows="5" cols="40" required></textarea><br>
+</fieldset>
+</form>

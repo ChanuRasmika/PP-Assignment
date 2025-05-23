@@ -1,0 +1,18 @@
+form InvalidForm {
+  section Test {
+    field badField: unknownType;  // 'unknownType' is not a valid input_type
+    field missingColon text;      // Missing colon ':' between identifier and type
+    field noSemicolon: text       // Missing semicolon at end
+  }
+}
+
+
+<form id="InvalidForm">
+<!-- Form: InvalidForm -->
+<fieldset>
+<legend>Test</legend>
+Parse error at line 3: syntax error
+Parse error at line 3: Invalid field definition, skipping.
+Parse error at line 3: syntax error
+Parse error at line 4: Invalid field definition, skipping.
+Parse error at line 4: syntax error

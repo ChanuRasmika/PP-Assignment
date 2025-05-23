@@ -1,0 +1,46 @@
+form RegistrationForm {
+   meta title = "User Information Form";
+  section PersonalInfo {
+    field name: text required; 
+    field age: number min=20 max=99 required;
+    field Email: email required pattern="^[^@]+@[^@]+\.[^@]+$"
+    field bio: textarea rows=5 cols=40 default="Tell us about yourself...";
+  }
+
+  section Preferences {
+    field favorite_color: dropdown options=["Red","Green","Blue","Other"] default="Green";
+    field newsletter: checkbox default=true;
+    
+  }
+
+  field submit_btn: submit;
+}
+
+
+
+
+<form id="RegistrationForm">
+<!-- Form: RegistrationForm -->
+<fieldset>
+<legend>PersonalInfo</legend>
+<label for="name">Name: </label>
+<input type="text" name="name" id="name" required><br>
+<label for="age">Age: </label>
+<input type="number" name="age" id="age" required min="20" max="99"><br>
+Parse error at line 7: syntax error
+Parse error at line 7: Invalid field definition, skipping.
+</fieldset>
+<fieldset>
+<legend>Preferences</legend>
+<label for="favorite_color">Favorite_color: </label>
+<select name="favorite_color" id="favorite_color">
+  <option value="Red">Red</option>
+  <option value="Green" selected>Green</option>
+  <option value="Blue">Blue</option>
+  <option value="Other">Other</option>
+</select><br>
+<label><input type="checkbox" name="newsletter" id="newsletter" checked> Newsletter</label><br>
+</fieldset>
+<label for="submit_btn">Submit_btn: </label>
+<input type="submit" name="submit_btn" id="submit_btn"><br>
+</form>
