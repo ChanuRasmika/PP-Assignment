@@ -87,6 +87,7 @@ int section_has_fields = 0;
 %token TEXT TEXTAREA DROPDOWN RADIO CHECKBOX COLOR DATE DATETIME_LOCAL EMAIL INPUT_FILE HIDDEN IMAGE MONTH PASSWORD RANGE RESET SEARCH SUBMIT TEL TIME URL WEEK BUTTON NUMBER
 %token ROWS COLS
 %token COLON SEMICOLON LBRACE RBRACE EQUALS LBRACKET RBRACKET COMMA
+%token LT GT
 
 %type <str> input_type
 %type <option_list> option_list
@@ -279,8 +280,12 @@ validation_condition:
     ;
 
 expr:
-    /* Simplified for now */
+    IDENTIFIER LT NUMVAL
+    | IDENTIFIER GT NUMVAL
+    | IDENTIFIER EQUALS NUMVAL
+    | IDENTIFIER
     ;
+
 
 %%
 
